@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    color-scheme: dark;
+    font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #0b0d11;
+    color: #e6eaf2;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  code,
+  pre,
+  textarea.font-mono,
+  .font-mono {
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Monaco Live Execution Trace Decorations */
+.codex-active-trace-line {
+  background-color: rgba(59, 130, 246, 0.22) !important;
+  box-shadow: inset 3px 0 0 #60a5fa;
+}
+
+.codex-active-trace-gutter {
+  background: radial-gradient(circle at center, #60a5fa 0%, #60a5fa 45%, transparent 50%);
+}
+
+.codex-completed-trace-line {
+  background-color: rgba(16, 185, 129, 0.08) !important;
+  box-shadow: inset 2px 0 0 rgba(52, 211, 153, 0.45);
+}
+
+.codex-completed-trace-gutter {
+  background: radial-gradient(circle at center, rgba(52, 211, 153, 0.65) 0%, rgba(52, 211, 153, 0.65) 28%, transparent 35%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Precision dark IDE scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262c38;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #394254;
+}

@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: codex-online-compiler
+    runtime: node
+    plan: free
+    buildCommand: npm install --include=dev && npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: JUDGE0_API_URL
+        sync: false
+      - key: JUDGE0_API_KEY
+        sync: false
+      - key: JUDGE0_API_HOST
+        sync: false
